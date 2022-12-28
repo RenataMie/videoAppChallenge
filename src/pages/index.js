@@ -3,7 +3,7 @@ import Head from "next/head";
 import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 import Playlist from "../components/Playlist/Playlist";
 
-import * as S from "../pages/home/style";
+import MainContainer from "./style";
 
 export default function Home() {
   return (
@@ -17,10 +17,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <S.MainContainer>
+      <MainContainer>
         <VideoPlayer />
         <Playlist />
-      </S.MainContainer>
+      </MainContainer>
     </>
   );
 }

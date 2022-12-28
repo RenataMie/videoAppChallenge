@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,3 +20,5 @@ export const MainContainer = styled.div`
       `}
   }
 `;
+
+export default MainContainer;
