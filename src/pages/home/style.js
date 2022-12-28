@@ -1,0 +1,22 @@
+import styled, { css } from "styled-components";
+
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  gap: 10px;
+  padding: 40px 0;
+  width: 100%;
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+
+    ${(props) =>
+      props.theater &&
+      css`
+        flex-direction: column;
+      `}
+  }
+`;
