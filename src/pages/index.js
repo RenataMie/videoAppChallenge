@@ -1,16 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "../../styles/Home.module.css";
 
 import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
-
-const inter = Inter({ subsets: ["latin"] });
+import Playlist from "../components/Playlist/Playlist";
 
 export default function Home() {
-  const toggleVideo = () => {
-    console.log("aaa");
-  };
   return (
     <>
       <Head>
@@ -23,9 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.center}>
-          <VideoPlayer />
-        </div>
+        <VideoPlayer />
+        <Playlist />
       </main>
     </>
   );
