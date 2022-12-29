@@ -72,7 +72,7 @@ export default function VideoPlayer() {
         ref={videoRef}
         width="100%"
         height="100%"
-        src="/videos/animals.mp4"
+        src="/videos/bird.mp4"
         playsInline
         onTimeUpdate={handleTimeUpdate}
       />
