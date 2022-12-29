@@ -2,7 +2,7 @@ export const VideoArray = [
   {
     nome: "Animals",
     duration: 13,
-    src: "/videos/animals.mp4",
+    src: "/videos/animals2.mp4",
     rating: 5,
   },
   {
