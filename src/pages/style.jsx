@@ -8,7 +8,7 @@ const MainContainer = styled.div`
   min-height: 100vh;
   gap: 10px;
   padding: 40px 0;
-  width: 100%;
+  // width: 100%;
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;

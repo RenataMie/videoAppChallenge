@@ -1,5 +1,6 @@
 import { VideoArray } from "../../utils/data/data";
 import { useCallback, useState } from "react";
+import Image from "next/image";
 
 import * as S from "./style";
 
@@ -26,7 +27,12 @@ export default function Playlist() {
           }}
         >
           <div style={{ width: "60%" }}>
-            <video width="100%" height="auto" src={video.src} />
+            <Image
+              alt="video thumb"
+              src={video.poster}
+              width="350"
+              height="200"
+            />
           </div>
           <div
             style={{
