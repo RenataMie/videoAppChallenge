@@ -4,6 +4,8 @@
 
 Player de video criado com Next
 
+![demo image](demoImage.png)
+
 ## Deploy da aplicação com Vercel:
 
 > https://video-app-challenge.vercel.app/
