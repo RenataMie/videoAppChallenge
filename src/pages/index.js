@@ -3,7 +3,7 @@ import Head from "next/head";
 import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
 import Playlist from "../components/Playlist/Playlist";
 
-import MainContainer from "./style";
+import MainContainer from "./home/style";
 
 export default function Home() {
   return (

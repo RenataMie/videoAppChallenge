@@ -22,26 +22,14 @@ export default function Playlist() {
           style={{
             display: "flex",
             alignItems: "flex-start",
-            gap: "20px",
+            gap: "10px",
             marginTop: "20px",
           }}
         >
-          <div style={{ width: "60%" }}>
-            <Image
-              alt="video thumb"
-              src={video.poster}
-              width="350"
-              height="200"
-            />
+          <div>
+            <Image alt="video thumb" src={video.poster} />
           </div>
-          <div
-            style={{
-              width: "40%",
-              position: "relative",
-              bottom: "15px",
-              left: "5px",
-            }}
-          >
+          <div style={{ width: "50%" }}>
             <h2>{video.nome}</h2>
             <p>Duracao: {video.duration}</p>
             <p>Rating: {video.rating}</p>
