@@ -4,7 +4,6 @@ export const VideoArray = [
     duration: 13,
     src: "/videos/animals.mp4",
     rating: 5,
-    poster: "/images/animals.png",
   },
   {
     nome: "Fireworks",
