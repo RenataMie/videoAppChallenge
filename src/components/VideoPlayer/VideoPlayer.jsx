@@ -17,6 +17,7 @@ export default function VideoPlayer() {
   const [volume, setVolume] = useState(1);
   const [videoDurationPercentage, setVideoDurationPercentage] = useState(0);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [iosDevice, setIosDevice] = useState(false);
 
   const togglePlayPause = () => {
     isPlaying ? videoRef.current.play() : videoRef.current.pause();
@@ -43,9 +44,14 @@ export default function VideoPlayer() {
   const toggleFullScreen = () => {
     if (isFullScreen) {
       setIsFullScreen(false);
-      document.exitFullscreen();
+      iosDevice
+        ? videoRef.current.webkitExitFullscreen()
+        : document.exitFullscreen();
     } else {
-      videoContainer.current.requestFullscreen();
+      iosDevice
+        ? videoRef.current.webkitEnterFullScreen()
+        : videoContainer.current.requestFullscreen();
+
       setIsFullScreen(true);
     }
   };
@@ -66,13 +72,20 @@ export default function VideoPlayer() {
     if (videoRef.current.ended) setVideoDurationPercentage(0);
   }, [videoRef.current?.ended]);
 
+  useEffect(() => {
+    if (window !== undefined) {
+      const ios = /iPad|iPhone|iPod/.test(window?.navigator?.userAgent);
+      setIosDevice(ios);
+    }
+  }, []);
+
   return (
     <S.VideoContainer ref={videoContainer}>
       <S.Video
         ref={videoRef}
         width="100%"
         height="100%"
-        src="/videos/bird.mp4"
+        src="/videos/animals2.mp4"
         playsInline
         onTimeUpdate={handleTimeUpdate}
       />

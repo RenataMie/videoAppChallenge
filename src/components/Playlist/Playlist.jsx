@@ -7,41 +7,40 @@ import * as S from "./style";
 export default function Playlist() {
   const [videos, setVideos] = useState(VideoArray);
 
-  const sortByName = () => {
-    const newVideoArray = [...VideoArray].sort((a, b) =>
-      a.nome.localeCompare(b.nome)
+  const sortVideos = (propertyName) => {
+    const newArray = [...VideoArray].sort((a, b) =>
+      a[propertyName].localeCompare(b[propertyName])
     );
-    setVideos(newVideoArray);
+    setVideos(newArray);
   };
 
   const renderVideos = useCallback(
     () =>
       videos.map((video) => (
-        <div
-          key={video.nome}
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "10px",
-            marginTop: "20px",
-          }}
-        >
+        <S.VideoContainer key={video.name}>
           <div>
             <Image alt="video thumb" src={video.poster} />
           </div>
-          <div style={{ width: "50%" }}>
-            <h2>{video.nome}</h2>
-            <p>Duracao: {video.duration}</p>
+          <S.VideoProperties>
+            <h2>{video.name}</h2>
+            <p>Duração: {video.duration}</p>
             <p>Rating: {video.rating}</p>
-          </div>
-        </div>
+          </S.VideoProperties>
+        </S.VideoContainer>
       )),
     [videos]
   );
 
   return (
     <S.Container>
-      <button onClick={sortByName}>A-Z</button>
+      <S.FilterButton onClick={() => sortVideos("name")}>A-Z</S.FilterButton>
+      <S.FilterButton onClick={() => sortVideos("duration")}>
+        {" "}
+        Duração
+      </S.FilterButton>
+      <S.FilterButton onClick={() => sortVideos("rating")}>
+        Rating
+      </S.FilterButton>
       <div>{renderVideos()}</div>
     </S.Container>
   );

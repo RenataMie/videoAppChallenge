@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-start;
   min-height: 100vh;
   gap: 20px;

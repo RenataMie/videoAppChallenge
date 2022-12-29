@@ -1,32 +1,35 @@
 import animalsThumb from "/public/images/animals.png";
+import birdThumb from "/public/images/bird.png";
+import fireworkThumb from "/public/images/firework.png";
+import sceneryThumb from "/public/images/scenery.png";
 
 export const VideoArray = [
   {
-    nome: "Animals",
-    duration: 13,
+    name: "Animals",
+    duration: "2:47",
     src: "/videos/animals2.mp4",
-    rating: 5,
+    rating: "5",
     poster: animalsThumb,
   },
   {
-    nome: "Fireworks",
-    duration: 20,
+    name: "Fireworks",
+    duration: "2:36",
     src: "/videos/fireworks.mp4",
-    rating: 1,
-    poster: animalsThumb,
+    rating: "1",
+    poster: fireworkThumb,
   },
   {
-    nome: "Scenery",
-    duration: 365,
+    name: "Scenery",
+    duration: "2:26",
     src: "/videos/scenery.mp4",
-    rating: 3,
-    poster: animalsThumb,
+    rating: "3",
+    poster: sceneryThumb,
   },
   {
-    nome: "Bird",
-    duration: 30,
+    name: "Bird",
+    duration: "1:54",
     src: "/videos/bird.mp4",
-    rating: 3,
-    poster: animalsThumb,
+    rating: "2",
+    poster: birdThumb,
   },
 ];
