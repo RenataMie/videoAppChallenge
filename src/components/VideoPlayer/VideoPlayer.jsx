@@ -71,8 +71,9 @@ export default function VideoPlayer() {
       <S.Video
         ref={videoRef}
         width="100%"
-        height="auto"
-        src="vi.mp4"
+        height="100%"
+        src="/videos/animals.mp4"
+        playsInline
         onTimeUpdate={handleTimeUpdate}
       />
       <S.ControlsContainer>

@@ -1,20 +1,27 @@
 export const VideoArray = [
   {
-    nome: "Intro",
+    nome: "Animals",
     duration: 13,
-    src: "vi.mp4",
+    src: "/videos/animals.mp4",
     rating: 5,
+    poster: "/images/animals.png",
   },
   {
-    nome: "Birds",
+    nome: "Fireworks",
     duration: 20,
-    src: "video.mp4",
+    src: "/videos/fireworks.mp4",
     rating: 1,
   },
   {
-    nome: "Ano novo",
+    nome: "Scenery",
     duration: 365,
-    src: "",
+    src: "/videos/scenery.mp4",
+    rating: 3,
+  },
+  {
+    nome: "Bird",
+    duration: 30,
+    src: "/videos/bird.mp4",
     rating: 3,
   },
 ];

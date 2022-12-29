@@ -26,7 +26,12 @@ export default function Playlist() {
           }}
         >
           <div style={{ width: "60%" }}>
-            <video width="100%" height="auto" src={video.src} />
+            <video
+              width="100%"
+              height="auto"
+              src={video.src}
+              poster={video.poster}
+            />
           </div>
           <div
             style={{
